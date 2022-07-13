@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <body></body>
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script>
-    
+  <body id="root"></body>
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    function App() {
+      const [minutes, setMinutes] = React.useState();
+
+      return (
+        <div>
+          <h1 className="hi">Super Converter</h1>
+          <label htmlFor="minutes">Minutes</label>
+          <input value={minutes} id="minutes" placeholder="Minutes" type="number" />
+          <label for="hours">Hours</label>
+          <input id="hours" placeholder="Hours" type="number" />
+        </div>
+      )
+    }
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root);
   </script>
 </html>
