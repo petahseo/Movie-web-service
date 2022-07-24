@@ -15,5 +15,7 @@ root.render(
         <Coin />
         <hr />
         <Movie />
+        <hr />
+        
     </div>
 );
